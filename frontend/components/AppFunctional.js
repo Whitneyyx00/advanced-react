@@ -21,7 +21,7 @@ export default function AppFunctional(props) {
   }
 
   function getXYMessage() {
-    const { x, y } = getXY().
+    const { x, y } = getXY()
     return `Coordinates (${x}, ${y})`
   }
 
@@ -37,7 +37,7 @@ export default function AppFunctional(props) {
       case 'left':
         return index % 3 === 0 ? index : index - 1
       case 'right':
-        return index % 3 === 2 ? indx : index + 1
+        return index % 3 === 2 ? index : index + 1
       case 'up':
         return index < 3 ? index : index - 3
       case 'down':
