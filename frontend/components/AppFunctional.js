@@ -51,6 +51,28 @@ export default function AppFunctional(props) {
     const direction = evt.target.id
     const newIndex = getNextIndex(direction)
 
+    if (newIndex === index) {
+      // Set a message when movement is not possible
+      switch (direction) {
+        case 'up':
+          setMessage("You can't go up")
+          break
+        case 'down':
+          setMessage("You can't go down")
+          break
+        case 'left':
+          setMessage("You can't go left")
+          break
+        case 'right':
+          setMessage("You can't go right")
+          break
+      }
+    } else {
+      setIndex(newIndex)
+      setSteps(prevSteps => prevSteps + 1)
+      setMessage('')
+    }
+
     if (newIndex !== index) {
       setIndex(newIndex)
       setSteps(prevSteps => prevSteps + 1)
