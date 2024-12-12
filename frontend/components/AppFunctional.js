@@ -83,23 +83,8 @@ export default function AppFunctional(props) {
     setEmail(evt.target.value)
   }
 
-  async function onSubmit(evt) {
-    evt.preventDefault()
-
-    const { x, y } = getXY()
-
-    try {
-      const response = await axios.post('http://localhost:9000/api/result', {
-        x,
-        y,
-        steps,
-        email
-      })
-
-      setMessage(response.data.message)
-    } catch (err) {
-      setMessage(err.response?.data?.message || 'An error occurred')
-    }
+  function onSubmit(evt) {
+    // Use a POST request to send a payload to the server.
   }
 
   return (
