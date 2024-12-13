@@ -17,6 +17,9 @@ importers:
       express:
         specifier: 4.18.1
         version: 4.18.1
+      headers-polyfill:
+        specifier: ^4.0.3
+        version: 4.0.3
       react:
         specifier: 18.1.0
         version: 18.1.0
@@ -2337,6 +2340,9 @@ packages:
 
   headers-polyfill@3.3.0:
     resolution: {integrity: sha512-5e57etwBpNcDc0b6KCVWEh/Ro063OxPvzVimUdM0/tsYM/T7Hfy3kknIGj78SFTOhNd8AZY41U8mOHoO4LzmIQ==}
+
+  headers-polyfill@4.0.3:
+    resolution: {integrity: sha512-IScLbePpkvO846sIwOtOTDjutRMWdXdJmXdMvk6gCBHxFO8d+QKOQedyZSxFTTFYRSmlgSTDtXqqq4pcenBXLQ==}
 
   history@5.3.0:
     resolution: {integrity: sha512-ZqaKwjjrAYUYfLG+htGaIIZ4nioX2L70ZUMIFysS3xvBsSG4x/n1V6TXV3N8ZYNuFGlDirFg32T7B6WOUPDYcQ==}
@@ -7207,6 +7213,8 @@ snapshots:
   he@1.2.0: {}
 
   headers-polyfill@3.3.0: {}
+
+  headers-polyfill@4.0.3: {}
 
   history@5.3.0:
     dependencies:
