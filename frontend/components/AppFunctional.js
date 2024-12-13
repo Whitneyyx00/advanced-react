@@ -69,7 +69,7 @@ export default function AppFunctional(props) {
       }
     } else {
       setIndex(newIndex)
-      setSteps((prevSteps) => prevSteps + 1)
+      setSteps(prevSteps => prevSteps + 1)
       setMessage('')
     }
 
@@ -83,8 +83,23 @@ export default function AppFunctional(props) {
     setEmail(evt.target.value)
   }
 
-  function onSubmit(evt) {
-    // Use a POST request to send a payload to the server.
+  async function onSubmit(evt) {
+    evt.preventDefault()
+
+    const { x, y } = getXY()
+
+    try {
+      const response = await axios.post('http://localhost:9000/api/result', {
+        x,
+        y,
+        steps,
+        email
+      })
+
+      setMessage(response.data.message)
+    } catch (err) {
+      setMessage(err.response?.data?.message || 'An error occurred')
+    }
   }
 
   return (
