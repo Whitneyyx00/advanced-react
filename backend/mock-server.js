@@ -1,4 +1,4 @@
-import { setupServer } from 'msw/node'
+const { setupServer } = require('msw/node')
 const { rest } = require('msw')
 
 const { buildResponse } = require('./helpers')
