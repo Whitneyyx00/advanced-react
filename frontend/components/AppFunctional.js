@@ -69,13 +69,13 @@ export default function AppFunctional(props) {
       }
     } else {
       setIndex(newIndex)
-      setSteps(prevSteps => prevSteps + 1)
+      setSteps((prevSteps) => prevSteps + 1)
       setMessage('')
     }
 
     if (newIndex !== index) {
       setIndex(newIndex)
-      setSteps(prevSteps => prevSteps + 1)
+      setSteps((prevSteps) => prevSteps)
     }
   }
 
