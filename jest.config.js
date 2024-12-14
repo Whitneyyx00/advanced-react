@@ -9,6 +9,9 @@ module.exports = {
 
   // Stop running tests after `n` failures
   // bail: 0,
+  transform: {
+    '^.+\\.[tj]sx?$': 'babel-jest',
+  },
 
   // The directory where Jest should store its cached dependency information
   // cacheDirectory: "/private/var/folders/mq/wc13nlwj4gdgcyshdy5j1hgr0000gn/T/jest_dx",
@@ -21,6 +24,9 @@ module.exports = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   // collectCoverageFrom: undefined,
+  moduleNameMapper: {
+    '^msw/node$': '<rootDir>/node_modules/msw/lib/node/index.js',
+  },
 
   // The directory where Jest should output its coverage files
   // coverageDirectory: undefined,

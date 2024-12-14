@@ -1,5 +1,5 @@
 const { setupServer } = require('msw/node')
-const { rest } = require('msw')
+const { rest } = require('../rest')
 
 const { buildResponse } = require('./helpers')
 
